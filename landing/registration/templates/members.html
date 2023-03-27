@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Участники
+{% endblock %}
+
+{% block content %}
+    <h1>Участники команд</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.member_name1 }}<br>
+        {{ form.member_surname1 }}<br>
+        {{ form.pro1 }}<br>
+        {{ form.potok1 }}<br><br>
+        {{ form.member_name2 }}<br>
+        {{ form.member_surname2 }}<br>
+        {{ form.pro2 }}<br>
+        {{ form.potok2 }}<br><br>
+        {{ form.member_name3 }}<br>
+        {{ form.member_surname3 }}<br>
+        {{ form.pro3 }}<br>
+        {{ form.potok3 }}<br><br>
+        {{ form.member_name4 }}<br>
+        {{ form.member_surname4 }}<br>
+        {{ form.pro4 }}<br>
+        {{ form.potok4 }}<br><br>
+        {{ form.member_name5 }}<br>
+        {{ form.member_surname5 }}<br>
+        {{ form.pro5 }}<br>
+        {{ form.potok5 }}<br><br>
+        <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
